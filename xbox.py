@@ -31,13 +31,25 @@ class Xbox(GameConsole):
             print("Tidak ada data xbox")
             return
 
-        print("\n" + "="*75)
-        print(f"{'Console ID':<12} {'Nama Console':<20} {'Harga/Hari':<15} {'Gamepass':<15}")
-        print("="*75)
-        for x in data:
-            gamepass_status = "Ya" if x['gamepass'] else "Tidak"
-            print(f"{x['gameconsole_id']:<12} {x['nama']:<20} Rp {x['harga_sewa_per_hari']:<12} {gamepass_status:<15}")
-        print("="*75 + "\n")
+        return data
+    
+    def search_by_name(self, search):
+        sql = """
+            SELECT x.*, g.nama, g.harga_sewa_per_hari 
+            FROM xbox x
+            JOIN gameconsole g ON x.gameconsole_id = g.id
+            WHERE g.nama LIKE %s
+        """
+        val = (f"%{search}%",)
+
+        mycursor.execute(sql, val)
+        data = mycursor.fetchall()
+
+        if not data:
+            print("Tidak ada data xbox")
+            return
+        
+        return data
 
     def show(self, gameconsole_id):
         sql = """
