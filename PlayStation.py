@@ -50,7 +50,15 @@ class PlayStation(GameConsole):
             return
         
         return data
+    
+    def get_by_id(self, id):
+        sql = "SELECT * FROM playstation p JOIN gameconsole g ON p.gameconsole_id = g.id WHERE gameconsole_id = %s"
+        val = (id,)
 
+        mycursor.execute(sql, val)
+        data = mycursor.fetchone()
+
+        return data
 
     def show(self, gameconsole_id):
         sql = """
