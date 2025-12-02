@@ -343,7 +343,7 @@ class Ui_MainWindow(object):
         self.window = QtWidgets.QMainWindow()
         self.ui = ip.Ui_MainWindow()
         self.ui.setupUi(self.window)
-        self.window.show()
+        self.window.show()   
         self.centralwidget.window().close()
 
     def update_playstation(self):

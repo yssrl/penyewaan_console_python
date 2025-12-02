@@ -419,6 +419,11 @@ class Ui_MainWindow(object):
         playstation_controller.remove(id)
 
         QtWidgets.QMessageBox.information(None, "Sukses", "Data PlayStation berhasil diperbarui")
+        self.window = QtWidgets.QMainWindow()
+        self.ui = ps.Ui_MainWindow()
+        self.ui.setupUi(self.window)
+        self.window.show()
+        self.centralwidget.window().close()
 
     def back_to_main(self):
         self.window = QtWidgets.QMainWindow()
