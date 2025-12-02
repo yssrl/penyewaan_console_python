@@ -30,13 +30,27 @@ class PlayStation(GameConsole):
         if not data:
             print("Tidak ada data playstation")
             return
+        
+        return data
+    
+    def search_by_name(self, search):
+        sql = """
+            SELECT p.*, g.nama, g.harga_sewa_per_hari 
+            FROM playstation p
+            JOIN gameconsole g ON p.gameconsole_id = g.id
+            WHERE g.nama LIKE %s
+        """
+        val = (f"%{search}%",)
 
-        print("\n" + "="*80)
-        print(f"{'Console ID':<12} {'Nama Console':<20} {'Harga/Hari':<15} {'Bonus Game':<30}")
-        print("="*80)
-        for x in data:
-            print(f"{x['gameconsole_id']:<12} {x['nama']:<20} Rp {x['harga_sewa_per_hari']:<12} {x['bonus_game']:<30}")
-        print("="*80 + "\n")
+        mycursor.execute(sql, val)
+        data = mycursor.fetchall()
+
+        if not data:
+            print("Tidak ada data playstation")
+            return
+        
+        return data
+
 
     def show(self, gameconsole_id):
         sql = """
