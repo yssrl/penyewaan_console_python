@@ -10,6 +10,7 @@
 from PlayStation import PlayStation
 
 playstation_controller = PlayStation()
+import ps
 
 from PyQt5 import QtCore, QtGui, QtWidgets
 
@@ -353,6 +354,8 @@ class Ui_MainWindow(object):
 
         self.pushButton_7.clicked.connect(self.update_data)
 
+        self.pushButton_8.clicked.connect(self.back_to_main)
+
     def retranslateUi(self, MainWindow):
         _translate = QtCore.QCoreApplication.translate
         MainWindow.setWindowTitle(_translate("MainWindow", "MainWindow"))
@@ -411,6 +414,13 @@ class Ui_MainWindow(object):
         playstation_controller.update(id, nama, harga, bonus_game)
 
         QtWidgets.QMessageBox.information(None, "Sukses", "Data PlayStation berhasil diperbarui")
+
+    def back_to_main(self):
+        self.window = QtWidgets.QMainWindow()
+        self.ui = ps.Ui_MainWindow()
+        self.ui.setupUi(self.window)
+        self.window.show()
+        self.centralwidget.window().close()
 
 
 if __name__ == "__main__":
