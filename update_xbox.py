@@ -11,6 +11,8 @@ from Xbox import Xbox
 
 xbox_controller = Xbox()
 
+import xbox_index
+
 from PyQt5 import QtCore, QtGui, QtWidgets
 
 
@@ -18,7 +20,6 @@ class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
         MainWindow.setObjectName("MainWindow")
         MainWindow.resize(1169, 800)
-        self.MainWindow = MainWindow
         self.centralwidget = QtWidgets.QWidget(MainWindow)
         self.centralwidget.setObjectName("centralwidget")
         self.frame = QtWidgets.QFrame(self.centralwidget)
@@ -347,7 +348,6 @@ class Ui_MainWindow(object):
         self.statusbar.setObjectName("statusbar")
         MainWindow.setStatusBar(self.statusbar)
 
-        self.pushButton_8.clicked.connect(self.kembali)
         self.retranslateUi(MainWindow)
         QtCore.QMetaObject.connectSlotsByName(MainWindow)
 
@@ -356,6 +356,8 @@ class Ui_MainWindow(object):
         self.pushButton_2.clicked.connect(self.search_xbox)
 
         self.pushButton_7.clicked.connect(self.update_data)
+
+        self.pushButton_8.clicked.connect(self.back_to_main)
 
     def retranslateUi(self, MainWindow):
         _translate = QtCore.QCoreApplication.translate
@@ -393,6 +395,13 @@ class Ui_MainWindow(object):
 
         self.comboBox.setCurrentText(gamepass)
 
+    def back_to_main(self):
+        self.window = QtWidgets.QMainWindow()
+        self.ui = xbox_index.Ui_MainWindow()
+        self.ui.setupUi(self.window)
+        self.window.show()
+        self.centralwidget.window().close()
+
     def update_data(self):
         id = self.lineEdit_2.text()
 
@@ -424,8 +433,11 @@ class Ui_MainWindow(object):
 
         QtWidgets.QMessageBox.information(None, "Sukses", "Data Xbox berhasil diperbarui")
 
-    def kembali(self):
-        self.MainWindow.close()
+        self.window = QtWidgets.QMainWindow()
+        self.ui = xbox_index.Ui_MainWindow()
+        self.ui.setupUi(self.window)
+        self.window.show()
+        self.centralwidget.window().close()
 
 if __name__ == "__main__":
     import sys

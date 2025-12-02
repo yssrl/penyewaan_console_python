@@ -11,6 +11,8 @@ from Xbox import Xbox
 
 xbox_controller = Xbox()
 
+import xbox_index
+
 from PyQt5 import QtCore, QtGui, QtWidgets
 
 
@@ -18,7 +20,6 @@ class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
         MainWindow.setObjectName("MainWindow")
         MainWindow.resize(1171, 801)
-        self.MainWindow = MainWindow
         self.centralwidget = QtWidgets.QWidget(MainWindow)
         self.centralwidget.setObjectName("centralwidget")
         self.frame_2 = QtWidgets.QFrame(self.centralwidget)
@@ -312,13 +313,15 @@ class Ui_MainWindow(object):
         self.statusbar.setObjectName("statusbar")
         MainWindow.setStatusBar(self.statusbar)
 
-        self.pushButton_7.clicked.connect(self.kembali)
         self.retranslateUi(MainWindow)
         QtCore.QMetaObject.connectSlotsByName(MainWindow)
+
+        self.pushButton_7.clicked.connect(self.back_to_main)
 
         self.comboBox.addItems(["Ya", "Tidak"])
 
         self.pushButton_2.clicked.connect(self.insert_data)
+
 
     def retranslateUi(self, MainWindow):
         _translate = QtCore.QCoreApplication.translate
@@ -336,8 +339,12 @@ class Ui_MainWindow(object):
         self.pushButton_2.setText(_translate("MainWindow", "Save"))
         self.pushButton_7.setText(_translate("MainWindow", "Back"))
 
-    def kembali(self):
-        self.MainWindow.close()
+    def back_to_main(self):
+        self.window = QtWidgets.QMainWindow()
+        self.ui = xbox_index.Ui_MainWindow()
+        self.ui.setupUi(self.window)
+        self.window.show()
+        self.centralwidget.window().close()
         
     def insert_data(self):
         nama = self.lineEdit_2.text()
@@ -355,6 +362,12 @@ class Ui_MainWindow(object):
         xbox_controller.insert(nama, harga, game_pass == "Ya")
         
         QtWidgets.QMessageBox.information(None, "Sukses", "Data Xbox berhasil disimpan")
+
+        self.window = QtWidgets.QMainWindow()
+        self.ui = xbox_index.Ui_MainWindow()
+        self.ui.setupUi(self.window)
+        self.window.show()
+        self.centralwidget.window().close()
 
 
 if __name__ == "__main__":
