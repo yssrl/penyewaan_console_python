@@ -338,6 +338,7 @@ class Ui_MainWindow(object):
 
     def kembali(self):
         self.MainWindow.close()
+        
     def insert_data(self):
         nama = self.lineEdit_2.text()
         harga = self.lineEdit_3.text()
