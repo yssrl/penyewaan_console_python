@@ -11,6 +11,8 @@ from PlayStation import PlayStation
 
 playstation_controller = PlayStation()
 
+import ps
+
 from PyQt5 import QtCore, QtGui, QtWidgets
 
 
@@ -299,6 +301,7 @@ class Ui_MainWindow(object):
         self.load_data()
 
         self.pushButton_2.clicked.connect(self.search_data)
+        self.pushButton_7.clicked.connect(self.back_to_main)
 
     def retranslateUi(self, MainWindow):
         _translate = QtCore.QCoreApplication.translate
@@ -351,6 +354,13 @@ class Ui_MainWindow(object):
             self.tableWidget.setItem(row, 1, QtWidgets.QTableWidgetItem(cell['nama']))
             self.tableWidget.setItem(row, 2, QtWidgets.QTableWidgetItem(str(cell['harga_sewa_per_hari'])))
             self.tableWidget.setItem(row, 3, QtWidgets.QTableWidgetItem(str(cell['bonus_game'])))
+
+    def back_to_main(self):
+        self.window = QtWidgets.QMainWindow()
+        self.ui = ps.Ui_MainWindow()
+        self.ui.setupUi(self.window)
+        self.window.show()
+        self.centralwidget.window().close()
 
 if __name__ == "__main__":
     import sys
