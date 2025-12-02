@@ -18,6 +18,7 @@ class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
         MainWindow.setObjectName("MainWindow")
         MainWindow.resize(1171, 801)
+        self.MainWindow = MainWindow
         self.centralwidget = QtWidgets.QWidget(MainWindow)
         self.centralwidget.setObjectName("centralwidget")
         self.frame_2 = QtWidgets.QFrame(self.centralwidget)
@@ -311,6 +312,7 @@ class Ui_MainWindow(object):
         self.statusbar.setObjectName("statusbar")
         MainWindow.setStatusBar(self.statusbar)
 
+        self.pushButton_7.clicked.connect(self.kembali)
         self.retranslateUi(MainWindow)
         QtCore.QMetaObject.connectSlotsByName(MainWindow)
 
@@ -334,6 +336,8 @@ class Ui_MainWindow(object):
         self.pushButton_2.setText(_translate("MainWindow", "Save"))
         self.pushButton_7.setText(_translate("MainWindow", "Back"))
 
+    def kembali(self):
+        self.MainWindow.close()
     def insert_data(self):
         nama = self.lineEdit_2.text()
         harga = self.lineEdit_3.text()
