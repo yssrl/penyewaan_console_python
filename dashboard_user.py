@@ -9,6 +9,10 @@
 
 
 from PyQt5 import QtCore, QtGui, QtWidgets
+import ps
+import xbox_index as xi
+# import sewa_consol as sc
+import login
 
 
 class Ui_MainWindow(object):
@@ -296,6 +300,10 @@ class Ui_MainWindow(object):
         self.retranslateUi(MainWindow)
         QtCore.QMetaObject.connectSlotsByName(MainWindow)
 
+        self.pushButton.clicked.connect(self.playstation)
+        self.pushButton_4.clicked.connect(self.xbox_index)
+        self.pushButton_6.clicked.connect(self.logout)
+
     def retranslateUi(self, MainWindow):
         _translate = QtCore.QCoreApplication.translate
         MainWindow.setWindowTitle(_translate("MainWindow", "MainWindow"))
@@ -311,6 +319,26 @@ class Ui_MainWindow(object):
         self.label_6.setText(_translate("MainWindow", "Total playstation di sewa"))
         self.label_7.setText(_translate("MainWindow", "0"))
 
+    def playstation(self):
+        self.window = QtWidgets.QMainWindow()
+        self.ui = ps.Ui_MainWindow()
+        self.ui.setupUi(self.window)
+        self.window.show()
+        self.centralwidget.window().close()
+
+    def xbox_index(self):
+        self.window = QtWidgets.QMainWindow()
+        self.ui = xi.Ui_MainWindow()
+        self.ui.setupUi(self.window)
+        self.window.show()
+        self.centralwidget.window().close()
+
+    def logout(self):
+        self.window = QtWidgets.QMainWindow()
+        self.ui = login.Ui_MainWindow()
+        self.ui.setupUi(self.window)
+        self.window.show()
+        self.centralwidget.window().close()
 
 if __name__ == "__main__":
     import sys

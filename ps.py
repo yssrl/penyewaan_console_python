@@ -12,6 +12,10 @@ import update_ps as up
 import delete_ps as dp
 import select_ps as sp
 from PyQt5 import QtCore, QtGui, QtWidgets
+import dashboard_user as du
+import xbox_index as xi
+# import sewa_consol as sc
+import login
 
 
 
@@ -319,6 +323,9 @@ class Ui_MainWindow(object):
         self.retranslateUi(MainWindow)
         QtCore.QMetaObject.connectSlotsByName(MainWindow)
 
+        self.pushButton.clicked.connect(self.dashboard_user)
+        self.pushButton_4.clicked.connect(self.xbox_index)
+        self.pushButton_6.clicked.connect(self.logout)
         self.pushButton_9.clicked.connect(self.insert_playstation)
         self.pushButton_7.clicked.connect(self.update_playstation)
         self.pushButton_8.clicked.connect(self.delete_playstation)
@@ -363,6 +370,27 @@ class Ui_MainWindow(object):
     def select_playstation(self):
         self.window = QtWidgets.QMainWindow()
         self.ui = sp.Ui_MainWindow()
+        self.ui.setupUi(self.window)
+        self.window.show()
+        self.centralwidget.window().close()
+
+    def dashboard_user(self):
+        self.window = QtWidgets.QMainWindow()
+        self.ui = du.Ui_MainWindow()
+        self.ui.setupUi(self.window)
+        self.window.show()
+        self.centralwidget.window().close()
+
+    def xbox_index(self):
+        self.window = QtWidgets.QMainWindow()
+        self.ui = xi.Ui_MainWindow()
+        self.ui.setupUi(self.window)
+        self.window.show()
+        self.centralwidget.window().close()
+
+    def logout(self):
+        self.window = QtWidgets.QMainWindow()
+        self.ui = login.Ui_MainWindow()
         self.ui.setupUi(self.window)
         self.window.show()
         self.centralwidget.window().close()
