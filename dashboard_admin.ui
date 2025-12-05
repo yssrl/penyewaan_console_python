@@ -371,51 +371,46 @@ QPushButton {
      </property>
     </widget>
    </widget>
-   <widget class="QPushButton" name="pushButton_cari_2">
-    <property name="geometry">
-     <rect>
-      <x>820</x>
-      <y>270</y>
-      <width>51</width>
-      <height>23</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>Cari</string>
-    </property>
-   </widget>
-   <widget class="QLineEdit" name="lineEdit_isiId_2">
-    <property name="geometry">
-     <rect>
-      <x>688</x>
-      <y>270</y>
-      <width>121</width>
-      <height>20</height>
-     </rect>
-    </property>
-   </widget>
-   <widget class="QLabel" name="label_id_2">
-    <property name="geometry">
-     <rect>
-      <x>600</x>
-      <y>270</y>
-      <width>71</width>
-      <height>16</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>Username:</string>
-    </property>
-   </widget>
    <widget class="QTableWidget" name="tableWidget_2">
     <property name="geometry">
      <rect>
       <x>430</x>
-      <y>310</y>
+      <y>350</y>
       <width>631</width>
       <height>181</height>
      </rect>
     </property>
+    <property name="font">
+     <font>
+      <family>Segoe UI</family>
+      <pointsize>9</pointsize>
+     </font>
+    </property>
+    <column>
+     <property name="text">
+      <string>Id</string>
+     </property>
+    </column>
+    <column>
+     <property name="text">
+      <string>Nama</string>
+     </property>
+    </column>
+    <column>
+     <property name="text">
+      <string>Username</string>
+     </property>
+    </column>
+    <column>
+     <property name="text">
+      <string>Password</string>
+     </property>
+    </column>
+    <column>
+     <property name="text">
+      <string>Role</string>
+     </property>
+    </column>
    </widget>
    <widget class="QPushButton" name="pushButton_2">
     <property name="enabled">
@@ -423,7 +418,7 @@ QPushButton {
     </property>
     <property name="geometry">
      <rect>
-      <x>610</x>
+      <x>630</x>
       <y>200</y>
       <width>271</width>
       <height>61</height>
@@ -446,7 +441,7 @@ QPushButton {
     <property name="styleSheet">
      <string notr="true">QPushButton {
     background-color: #d9ecff;
-	color: grey; 
+	color:  #5a5a5a; 
 	border-radius: 6px;         
 }
 
@@ -455,17 +450,89 @@ QPushButton {
     vertical-align: middle; 
     padding-left: 5px; 
 }
+
 </string>
     </property>
     <property name="text">
      <string>Lihat Data user</string>
     </property>
-    <property name="icon">
-     <iconset>
-      <normaloff>C:/Users/ASUS/Downloads/dashboard.png</normaloff>C:/Users/ASUS/Downloads/dashboard.png</iconset>
-    </property>
     <property name="autoDefault">
      <bool>false</bool>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pushButton_7">
+    <property name="geometry">
+     <rect>
+      <x>950</x>
+      <y>280</y>
+      <width>111</width>
+      <height>51</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Mongolian Baiti</family>
+      <pointsize>10</pointsize>
+      <weight>75</weight>
+      <bold>true</bold>
+      <kerning>false</kerning>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton {
+    background-color: #3498db;   
+	color: white; 
+	border-radius: 6px;            
+}
+
+QPushButton:hover {
+    background-color: #2980b9;   
+}
+
+QPushButton:pressed {
+    background-color: #1c6690;  
+}
+</string>
+    </property>
+    <property name="text">
+     <string>Cari</string>
+    </property>
+    <property name="default">
+     <bool>false</bool>
+    </property>
+    <property name="flat">
+     <bool>false</bool>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="lineEdit">
+    <property name="geometry">
+     <rect>
+      <x>580</x>
+      <y>280</y>
+      <width>351</width>
+      <height>51</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_4">
+    <property name="geometry">
+     <rect>
+      <x>450</x>
+      <y>290</y>
+      <width>121</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Mongolian Baiti</family>
+      <pointsize>15</pointsize>
+      <weight>75</weight>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="text">
+     <string>Username</string>
     </property>
    </widget>
   </widget>
@@ -475,7 +542,7 @@ QPushButton {
      <x>0</x>
      <y>0</y>
      <width>1180</width>
-     <height>19</height>
+     <height>22</height>
     </rect>
    </property>
   </widget>
