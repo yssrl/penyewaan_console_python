@@ -11,8 +11,10 @@ import insert_xbox as ix
 import update_xbox as ux
 import delete_xbox as dx
 import select_xbox as sx
-
 from PyQt5 import QtCore, QtGui, QtWidgets
+import dashboard_user as du
+import ps
+import login
 
 
 class Ui_MainWindow(object):
@@ -324,6 +326,9 @@ class Ui_MainWindow(object):
         self.pushButton_8.clicked.connect(self.open_delete_xbox)   # Delete Xbox
         self.pushButton_2.clicked.connect(self.open_select_xbox)
         QtCore.QMetaObject.connectSlotsByName(MainWindow)
+        self.pushButton.clicked.connect(self.dashboard_user)  # Dashboard User
+        self.pushButton_3.clicked.connect(self.playstation)    # Playstation
+        self.pushButton_6.clicked.connect(self.logout)         # Logout
 
     def retranslateUi(self, MainWindow):
         _translate = QtCore.QCoreApplication.translate
@@ -364,6 +369,27 @@ class Ui_MainWindow(object):
     def open_select_xbox(self):
         self.window = QtWidgets.QMainWindow()
         self.ui = sx.Ui_MainWindow()
+        self.ui.setupUi(self.window)
+        self.window.show()
+        self.centralwidget.window().close()
+
+    def dashboard_user(self):
+        self.window = QtWidgets.QMainWindow()
+        self.ui = du.Ui_MainWindow()
+        self.ui.setupUi(self.window)
+        self.window.show()
+        self.centralwidget.window().close()
+
+    def playstation(self):
+        self.window = QtWidgets.QMainWindow()
+        self.ui = ps.Ui_MainWindow()
+        self.ui.setupUi(self.window)
+        self.window.show()
+        self.centralwidget.window().close()
+
+    def logout(self):
+        self.window = QtWidgets.QMainWindow()
+        self.ui = login.Ui_MainWindow()
         self.ui.setupUi(self.window)
         self.window.show()
         self.centralwidget.window().close()

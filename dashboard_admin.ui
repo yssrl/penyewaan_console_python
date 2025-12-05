@@ -91,7 +91,7 @@
 }</string>
      </property>
      <property name="text">
-      <string>Menu Utama Kasir</string>
+      <string>Menu Utama Admin</string>
      </property>
     </widget>
     <widget class="QPushButton" name="pushButton">
@@ -182,7 +182,7 @@ QPushButton {
 </string>
      </property>
      <property name="text">
-      <string> Playstation</string>
+      <string>Perbarui Data User</string>
      </property>
      <property name="icon">
       <iconset>
@@ -227,7 +227,7 @@ QPushButton {
 </string>
      </property>
      <property name="text">
-      <string> Xbox</string>
+      <string>Tambahkan User</string>
      </property>
      <property name="icon">
       <iconset>
@@ -271,7 +271,7 @@ QPushButton {
 </string>
      </property>
      <property name="text">
-      <string> Sewa Consol</string>
+      <string>Hapus User</string>
      </property>
      <property name="icon">
       <iconset>
@@ -367,243 +367,106 @@ QPushButton {
 }</string>
      </property>
      <property name="text">
-      <string>Selamat Datang DI Sewa Consol</string>
+      <string>Selamat Datang DI Kelola User</string>
      </property>
     </widget>
    </widget>
-   <widget class="QFrame" name="frame_3">
+   <widget class="QPushButton" name="pushButton_cari_2">
     <property name="geometry">
      <rect>
-      <x>390</x>
+      <x>820</x>
       <y>270</y>
-      <width>331</width>
-      <height>201</height>
+      <width>51</width>
+      <height>23</height>
      </rect>
     </property>
-    <property name="styleSheet">
-     <string notr="true">QFrame {
-    background-color: #d9ecff;
-    border-radius: 20px;
-}</string>
+    <property name="text">
+     <string>Cari</string>
     </property>
-    <property name="frameShape">
-     <enum>QFrame::StyledPanel</enum>
-    </property>
-    <property name="frameShadow">
-     <enum>QFrame::Raised</enum>
-    </property>
-    <widget class="QLabel" name="label_4">
-     <property name="geometry">
-      <rect>
-       <x>80</x>
-       <y>40</y>
-       <width>241</width>
-       <height>41</height>
-      </rect>
-     </property>
-     <property name="font">
-      <font>
-       <pointsize>10</pointsize>
-       <weight>75</weight>
-       <bold>true</bold>
-      </font>
-     </property>
-     <property name="styleSheet">
-      <string notr="true">QLabel {
-    color: #5a5a5a
-}</string>
-     </property>
-     <property name="text">
-      <string>Total xbox di sewa</string>
-     </property>
-    </widget>
-    <widget class="QLabel" name="label_5">
-     <property name="geometry">
-      <rect>
-       <x>130</x>
-       <y>100</y>
-       <width>61</width>
-       <height>41</height>
-      </rect>
-     </property>
-     <property name="font">
-      <font>
-       <pointsize>16</pointsize>
-       <weight>75</weight>
-       <bold>true</bold>
-      </font>
-     </property>
-     <property name="styleSheet">
-      <string notr="true">QLabel {
-    color: #5a5a5a
-}</string>
-     </property>
-     <property name="text">
-      <string>0</string>
-     </property>
-     <property name="textFormat">
-      <enum>Qt::AutoText</enum>
-     </property>
-     <property name="alignment">
-      <set>Qt::AlignCenter</set>
-     </property>
-    </widget>
    </widget>
-   <widget class="QFrame" name="frame_4">
+   <widget class="QLineEdit" name="lineEdit_isiId_2">
     <property name="geometry">
      <rect>
-      <x>780</x>
+      <x>688</x>
       <y>270</y>
-      <width>331</width>
-      <height>201</height>
+      <width>121</width>
+      <height>20</height>
      </rect>
     </property>
-    <property name="styleSheet">
-     <string notr="true">QFrame {
-    background-color: #d9ecff;
-    border-radius: 20px;
-}</string>
-    </property>
-    <property name="frameShape">
-     <enum>QFrame::StyledPanel</enum>
-    </property>
-    <property name="frameShadow">
-     <enum>QFrame::Raised</enum>
-    </property>
-    <widget class="QLabel" name="label_6">
-     <property name="geometry">
-      <rect>
-       <x>60</x>
-       <y>40</y>
-       <width>271</width>
-       <height>41</height>
-      </rect>
-     </property>
-     <property name="font">
-      <font>
-       <pointsize>10</pointsize>
-       <weight>75</weight>
-       <bold>true</bold>
-      </font>
-     </property>
-     <property name="styleSheet">
-      <string notr="true">QLabel {
-    color: #5a5a5a
-}</string>
-     </property>
-     <property name="text">
-      <string>Total playstation di sewa</string>
-     </property>
-    </widget>
-    <widget class="QLabel" name="label_7">
-     <property name="geometry">
-      <rect>
-       <x>130</x>
-       <y>100</y>
-       <width>61</width>
-       <height>41</height>
-      </rect>
-     </property>
-     <property name="font">
-      <font>
-       <pointsize>16</pointsize>
-       <weight>75</weight>
-       <bold>true</bold>
-      </font>
-     </property>
-     <property name="styleSheet">
-      <string notr="true">QLabel {
-    color: #5a5a5a
-}</string>
-     </property>
-     <property name="text">
-      <string>0</string>
-     </property>
-     <property name="textFormat">
-      <enum>Qt::AutoText</enum>
-     </property>
-     <property name="alignment">
-      <set>Qt::AlignCenter</set>
-     </property>
-    </widget>
    </widget>
-   <widget class="QFrame" name="frame_5">
+   <widget class="QLabel" name="label_id_2">
     <property name="geometry">
      <rect>
-      <x>390</x>
-      <y>500</y>
-      <width>721</width>
-      <height>201</height>
+      <x>600</x>
+      <y>270</y>
+      <width>71</width>
+      <height>16</height>
      </rect>
     </property>
+    <property name="text">
+     <string>Username:</string>
+    </property>
+   </widget>
+   <widget class="QTableWidget" name="tableWidget_2">
+    <property name="geometry">
+     <rect>
+      <x>430</x>
+      <y>310</y>
+      <width>631</width>
+      <height>181</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pushButton_2">
+    <property name="enabled">
+     <bool>true</bool>
+    </property>
+    <property name="geometry">
+     <rect>
+      <x>610</x>
+      <y>200</y>
+      <width>271</width>
+      <height>61</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Microsoft New Tai Lue</family>
+      <pointsize>10</pointsize>
+      <weight>75</weight>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="contextMenuPolicy">
+     <enum>Qt::DefaultContextMenu</enum>
+    </property>
+    <property name="layoutDirection">
+     <enum>Qt::LeftToRight</enum>
+    </property>
     <property name="styleSheet">
-     <string notr="true">QFrame {
+     <string notr="true">QPushButton {
     background-color: #d9ecff;
-    border-radius: 20px;
-}</string>
+	color: grey; 
+	border-radius: 6px;         
+}
+
+QPushButton {
+    text-align: center;
+    vertical-align: middle; 
+    padding-left: 5px; 
+}
+</string>
     </property>
-    <property name="frameShape">
-     <enum>QFrame::StyledPanel</enum>
+    <property name="text">
+     <string>Lihat Data user</string>
     </property>
-    <property name="frameShadow">
-     <enum>QFrame::Raised</enum>
+    <property name="icon">
+     <iconset>
+      <normaloff>C:/Users/ASUS/Downloads/dashboard.png</normaloff>C:/Users/ASUS/Downloads/dashboard.png</iconset>
     </property>
-    <widget class="QLabel" name="label_8">
-     <property name="geometry">
-      <rect>
-       <x>280</x>
-       <y>40</y>
-       <width>241</width>
-       <height>41</height>
-      </rect>
-     </property>
-     <property name="font">
-      <font>
-       <pointsize>10</pointsize>
-       <weight>75</weight>
-       <bold>true</bold>
-      </font>
-     </property>
-     <property name="styleSheet">
-      <string notr="true">QLabel {
-    color: #5a5a5a
-}</string>
-     </property>
-     <property name="text">
-      <string>Total yang di sewa</string>
-     </property>
-    </widget>
-    <widget class="QLabel" name="label_9">
-     <property name="geometry">
-      <rect>
-       <x>330</x>
-       <y>100</y>
-       <width>61</width>
-       <height>41</height>
-      </rect>
-     </property>
-     <property name="font">
-      <font>
-       <pointsize>16</pointsize>
-       <weight>75</weight>
-       <bold>true</bold>
-      </font>
-     </property>
-     <property name="styleSheet">
-      <string notr="true">QLabel {
-    color: #5a5a5a
-}</string>
-     </property>
-     <property name="text">
-      <string>0</string>
-     </property>
-     <property name="textFormat">
-      <enum>Qt::AutoText</enum>
-     </property>
-     <property name="alignment">
-      <set>Qt::AlignCenter</set>
-     </property>
-    </widget>
+    <property name="autoDefault">
+     <bool>false</bool>
+    </property>
    </widget>
   </widget>
   <widget class="QMenuBar" name="menubar">
@@ -612,7 +475,7 @@ QPushButton {
      <x>0</x>
      <y>0</y>
      <width>1180</width>
-     <height>22</height>
+     <height>19</height>
     </rect>
    </property>
   </widget>
