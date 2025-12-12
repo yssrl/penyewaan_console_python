@@ -14,6 +14,7 @@ import select_xbox as sx
 from PyQt5 import QtCore, QtGui, QtWidgets
 import dashboard_user as du
 import ps
+import sewa_consol as sc
 import login
 
 
@@ -328,6 +329,7 @@ class Ui_MainWindow(object):
         QtCore.QMetaObject.connectSlotsByName(MainWindow)
         self.pushButton.clicked.connect(self.dashboard_user)  # Dashboard User
         self.pushButton_3.clicked.connect(self.playstation)    # Playstation
+        self.pushButton_5.clicked.connect(self.sewa_consol)    # Sewa Consol
         self.pushButton_6.clicked.connect(self.logout)         # Logout
 
     def retranslateUi(self, MainWindow):
@@ -383,6 +385,13 @@ class Ui_MainWindow(object):
     def playstation(self):
         self.window = QtWidgets.QMainWindow()
         self.ui = ps.Ui_MainWindow()
+        self.ui.setupUi(self.window)
+        self.window.show()
+        self.centralwidget.window().close()
+
+    def sewa_consol(self):
+        self.window = QtWidgets.QMainWindow()
+        self.ui = sc.Ui_MainWindow()
         self.ui.setupUi(self.window)
         self.window.show()
         self.centralwidget.window().close()

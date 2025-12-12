@@ -10,6 +10,7 @@
 
 import ps
 import xbox_index as xi
+import sewa_consol as sc
 import login
 from PyQt5 import QtCore, QtGui, QtWidgets
 
@@ -334,6 +335,7 @@ class Ui_MainWindow(object):
 
         self.pushButton_3.clicked.connect(self.playstation)
         self.pushButton_4.clicked.connect(self.xbox_index)
+        self.pushButton_5.clicked.connect(self.sewa_consol)
         self.pushButton_6.clicked.connect(self.logout)
 
     def retranslateUi(self, MainWindow):
@@ -363,6 +365,13 @@ class Ui_MainWindow(object):
     def xbox_index(self):
         self.window = QtWidgets.QMainWindow()
         self.ui = xi.Ui_MainWindow()
+        self.ui.setupUi(self.window)
+        self.window.show()
+        self.centralwidget.window().close()
+
+    def sewa_consol(self):
+        self.window = QtWidgets.QMainWindow()
+        self.ui = sc.Ui_MainWindow()
         self.ui.setupUi(self.window)
         self.window.show()
         self.centralwidget.window().close()
