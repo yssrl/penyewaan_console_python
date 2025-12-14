@@ -369,8 +369,8 @@ QPushButton {
    <widget class="QLabel" name="label_6">
     <property name="geometry">
      <rect>
-      <x>560</x>
-      <y>460</y>
+      <x>450</x>
+      <y>370</y>
       <width>131</width>
       <height>31</height>
      </rect>
@@ -383,15 +383,15 @@ QPushButton {
      </font>
     </property>
     <property name="text">
-     <string>Nama</string>
+     <string>Nama Penyewa</string>
     </property>
    </widget>
    <widget class="QLineEdit" name="lineEdit_2">
     <property name="geometry">
      <rect>
-      <x>690</x>
-      <y>370</y>
-      <width>251</width>
+      <x>620</x>
+      <y>280</y>
+      <width>241</width>
       <height>51</height>
      </rect>
     </property>
@@ -399,8 +399,8 @@ QPushButton {
    <widget class="QLabel" name="label_5">
     <property name="geometry">
      <rect>
-      <x>560</x>
-      <y>380</y>
+      <x>450</x>
+      <y>290</y>
       <width>131</width>
       <height>31</height>
      </rect>
@@ -413,34 +413,14 @@ QPushButton {
      </font>
     </property>
     <property name="text">
-     <string>ID Consol</string>
-    </property>
-   </widget>
-   <widget class="QLineEdit" name="lineEdit_3">
-    <property name="geometry">
-     <rect>
-      <x>690</x>
-      <y>450</y>
-      <width>251</width>
-      <height>51</height>
-     </rect>
-    </property>
-   </widget>
-   <widget class="QLineEdit" name="lineEdit_4">
-    <property name="geometry">
-     <rect>
-      <x>690</x>
-      <y>530</y>
-      <width>251</width>
-      <height>51</height>
-     </rect>
+     <string>ID  Consol</string>
     </property>
    </widget>
    <widget class="QLabel" name="label_8">
     <property name="geometry">
      <rect>
-      <x>560</x>
-      <y>540</y>
+      <x>450</x>
+      <y>450</y>
       <width>131</width>
       <height>31</height>
      </rect>
@@ -456,25 +436,12 @@ QPushButton {
      <string>Jumlah Hari</string>
     </property>
    </widget>
-   <widget class="QLineEdit" name="lineEdit_5">
-    <property name="geometry">
-     <rect>
-      <x>690</x>
-      <y>600</y>
-      <width>251</width>
-      <height>51</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string/>
-    </property>
-   </widget>
    <widget class="QLabel" name="label_9">
     <property name="geometry">
      <rect>
-      <x>560</x>
-      <y>610</y>
-      <width>131</width>
+      <x>450</x>
+      <y>520</y>
+      <width>151</width>
       <height>31</height>
      </rect>
     </property>
@@ -486,54 +453,14 @@ QPushButton {
      </font>
     </property>
     <property name="text">
-     <string>Total Bayar</string>
-    </property>
-   </widget>
-   <widget class="QLabel" name="label_10">
-    <property name="geometry">
-     <rect>
-      <x>660</x>
-      <y>220</y>
-      <width>161</width>
-      <height>31</height>
-     </rect>
-    </property>
-    <property name="font">
-     <font>
-      <pointsize>10</pointsize>
-      <weight>75</weight>
-      <bold>true</bold>
-     </font>
-    </property>
-    <property name="text">
-     <string>Berhasil Menyewa</string>
-    </property>
-   </widget>
-   <widget class="QLabel" name="label_11">
-    <property name="geometry">
-     <rect>
-      <x>560</x>
-      <y>270</y>
-      <width>381</width>
-      <height>51</height>
-     </rect>
-    </property>
-    <property name="font">
-     <font>
-      <pointsize>8</pointsize>
-      <weight>50</weight>
-      <bold>false</bold>
-     </font>
-    </property>
-    <property name="text">
-     <string/>
+     <string>Harga Sewa/hari</string>
     </property>
    </widget>
    <widget class="QPushButton" name="pushButton_7">
     <property name="geometry">
      <rect>
-      <x>830</x>
-      <y>670</y>
+      <x>840</x>
+      <y>580</y>
       <width>111</width>
       <height>51</height>
      </rect>
@@ -575,8 +502,8 @@ QPushButton:pressed {
    <widget class="QPushButton" name="pushButton_2">
     <property name="geometry">
      <rect>
-      <x>690</x>
-      <y>670</y>
+      <x>700</x>
+      <y>580</y>
       <width>111</width>
       <height>51</height>
      </rect>
@@ -613,6 +540,92 @@ QPushButton:pressed {
     </property>
     <property name="flat">
      <bool>false</bool>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pushButton_8">
+    <property name="geometry">
+     <rect>
+      <x>880</x>
+      <y>280</y>
+      <width>121</width>
+      <height>51</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>10</pointsize>
+      <weight>75</weight>
+      <bold>true</bold>
+      <kerning>false</kerning>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton {
+    background-color: #3498db;   
+	color: white; 
+	border-radius: 6px;            
+}
+
+QPushButton:hover {
+    background-color: #2980b9;   
+}
+
+QPushButton:pressed {
+    background-color: #1c6690;  
+}
+</string>
+    </property>
+    <property name="text">
+     <string>Cari</string>
+    </property>
+    <property name="default">
+     <bool>false</bool>
+    </property>
+    <property name="flat">
+     <bool>false</bool>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_14">
+    <property name="geometry">
+     <rect>
+      <x>620</x>
+      <y>510</y>
+      <width>381</width>
+      <height>51</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>10</pointsize>
+      <weight>75</weight>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="lineEdit_3">
+    <property name="geometry">
+     <rect>
+      <x>620</x>
+      <y>360</y>
+      <width>381</width>
+      <height>51</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="lineEdit_4">
+    <property name="geometry">
+     <rect>
+      <x>620</x>
+      <y>440</y>
+      <width>381</width>
+      <height>51</height>
+     </rect>
     </property>
    </widget>
   </widget>
