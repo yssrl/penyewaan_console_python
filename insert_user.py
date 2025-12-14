@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 
-# Form implementation generated from reading ui file 'dashboard_admin.ui'
+# Form implementation generated from reading ui file 'insert_user.ui'
 #
 # Created by: PyQt5 UI code generator 5.15.9
 #
@@ -57,7 +57,7 @@ class Ui_MainWindow(object):
         self.label.setObjectName("label")
         self.pushButton = QtWidgets.QPushButton(self.frame)
         self.pushButton.setEnabled(True)
-        self.pushButton.setGeometry(QtCore.QRect(30, 270, 271, 61))
+        self.pushButton.setGeometry(QtCore.QRect(30, 350, 271, 61))
         font = QtGui.QFont()
         font.setFamily("Microsoft New Tai Lue")
         font.setPointSize(10)
@@ -113,7 +113,7 @@ class Ui_MainWindow(object):
         self.pushButton_3.setIcon(icon1)
         self.pushButton_3.setObjectName("pushButton_3")
         self.pushButton_4 = QtWidgets.QPushButton(self.frame)
-        self.pushButton_4.setGeometry(QtCore.QRect(30, 360, 271, 61))
+        self.pushButton_4.setGeometry(QtCore.QRect(30, 260, 271, 61))
         font = QtGui.QFont()
         font.setFamily("Microsoft New Tai Lue")
         font.setPointSize(10)
@@ -221,28 +221,50 @@ class Ui_MainWindow(object):
 "    color: #5a5a5a\n"
 "}")
         self.label_2.setObjectName("label_2")
-        self.tableWidget_2 = QtWidgets.QTableWidget(self.centralwidget)
-        self.tableWidget_2.setGeometry(QtCore.QRect(430, 350, 631, 181))
-        font = QtGui.QFont()
-        font.setFamily("Segoe UI")
-        font.setPointSize(9)
-        self.tableWidget_2.setFont(font)
-        self.tableWidget_2.setObjectName("tableWidget_2")
-        self.tableWidget_2.setColumnCount(5)
-        self.tableWidget_2.setRowCount(0)
-        item = QtWidgets.QTableWidgetItem()
-        self.tableWidget_2.setHorizontalHeaderItem(0, item)
-        item = QtWidgets.QTableWidgetItem()
-        self.tableWidget_2.setHorizontalHeaderItem(1, item)
-        item = QtWidgets.QTableWidgetItem()
-        self.tableWidget_2.setHorizontalHeaderItem(2, item)
-        item = QtWidgets.QTableWidgetItem()
-        self.tableWidget_2.setHorizontalHeaderItem(3, item)
-        item = QtWidgets.QTableWidgetItem()
-        self.tableWidget_2.setHorizontalHeaderItem(4, item)
+        self.label_username = QtWidgets.QLabel(self.centralwidget)
+        self.label_username.setGeometry(QtCore.QRect(540, 390, 61, 16))
+        self.label_username.setObjectName("label_username")
+        self.comboBox_pilihKategori = QtWidgets.QComboBox(self.centralwidget)
+        self.comboBox_pilihKategori.setGeometry(QtCore.QRect(620, 490, 281, 31))
+        self.comboBox_pilihKategori.setObjectName("comboBox_pilihKategori")
+        self.label_nama = QtWidgets.QLabel(self.centralwidget)
+        self.label_nama.setGeometry(QtCore.QRect(540, 340, 47, 13))
+        self.label_nama.setObjectName("label_nama")
+        self.lineEdit_isiUsername = QtWidgets.QLineEdit(self.centralwidget)
+        self.lineEdit_isiUsername.setGeometry(QtCore.QRect(620, 390, 281, 20))
+        self.lineEdit_isiUsername.setObjectName("lineEdit_isiUsername")
+        self.pushButton_simpan = QtWidgets.QPushButton(self.centralwidget)
+        self.pushButton_simpan.setGeometry(QtCore.QRect(610, 590, 291, 51))
+        self.pushButton_simpan.setStyleSheet("QPushButton {\n"
+"    background-color: #d9ecff;   \n"
+"    color: black; \n"
+"    border-radius: 6px;            \n"
+"}\n"
+"\n"
+"\n"
+"QPushButton {\n"
+"    text-align: center;\n"
+"    vertical-align: middle; \n"
+"    padding-left: 5px; \n"
+"}\n"
+"\n"
+"")
+        self.pushButton_simpan.setObjectName("pushButton_simpan")
+        self.label_level = QtWidgets.QLabel(self.centralwidget)
+        self.label_level.setGeometry(QtCore.QRect(540, 500, 47, 13))
+        self.label_level.setObjectName("label_level")
+        self.lineEdit_Nama = QtWidgets.QLineEdit(self.centralwidget)
+        self.lineEdit_Nama.setGeometry(QtCore.QRect(620, 340, 281, 20))
+        self.lineEdit_Nama.setObjectName("lineEdit_Nama")
+        self.lineEdit_isiPassword = QtWidgets.QLineEdit(self.centralwidget)
+        self.lineEdit_isiPassword.setGeometry(QtCore.QRect(620, 440, 281, 20))
+        self.lineEdit_isiPassword.setObjectName("lineEdit_isiPassword")
+        self.label_password = QtWidgets.QLabel(self.centralwidget)
+        self.label_password.setGeometry(QtCore.QRect(540, 440, 61, 16))
+        self.label_password.setObjectName("label_password")
         self.pushButton_2 = QtWidgets.QPushButton(self.centralwidget)
         self.pushButton_2.setEnabled(True)
-        self.pushButton_2.setGeometry(QtCore.QRect(630, 200, 271, 61))
+        self.pushButton_2.setGeometry(QtCore.QRect(620, 210, 271, 61))
         font = QtGui.QFont()
         font.setFamily("Microsoft New Tai Lue")
         font.setPointSize(10)
@@ -253,7 +275,7 @@ class Ui_MainWindow(object):
         self.pushButton_2.setLayoutDirection(QtCore.Qt.LeftToRight)
         self.pushButton_2.setStyleSheet("QPushButton {\n"
 "    background-color: #d9ecff;\n"
-"    color:  #5a5a5a; \n"
+"    color: grey; \n"
 "    border-radius: 6px;         \n"
 "}\n"
 "\n"
@@ -262,51 +284,13 @@ class Ui_MainWindow(object):
 "    vertical-align: middle; \n"
 "    padding-left: 5px; \n"
 "}\n"
-"\n"
 "")
+        self.pushButton_2.setIcon(icon)
         self.pushButton_2.setAutoDefault(False)
         self.pushButton_2.setObjectName("pushButton_2")
-        self.pushButton_7 = QtWidgets.QPushButton(self.centralwidget)
-        self.pushButton_7.setGeometry(QtCore.QRect(950, 280, 111, 51))
-        font = QtGui.QFont()
-        font.setFamily("Mongolian Baiti")
-        font.setPointSize(10)
-        font.setBold(True)
-        font.setWeight(75)
-        font.setKerning(False)
-        self.pushButton_7.setFont(font)
-        self.pushButton_7.setStyleSheet("QPushButton {\n"
-"    background-color: #3498db;   \n"
-"    color: white; \n"
-"    border-radius: 6px;            \n"
-"}\n"
-"\n"
-"QPushButton:hover {\n"
-"    background-color: #2980b9;   \n"
-"}\n"
-"\n"
-"QPushButton:pressed {\n"
-"    background-color: #1c6690;  \n"
-"}\n"
-"")
-        self.pushButton_7.setDefault(False)
-        self.pushButton_7.setFlat(False)
-        self.pushButton_7.setObjectName("pushButton_7")
-        self.lineEdit = QtWidgets.QLineEdit(self.centralwidget)
-        self.lineEdit.setGeometry(QtCore.QRect(580, 280, 351, 51))
-        self.lineEdit.setObjectName("lineEdit")
-        self.label_4 = QtWidgets.QLabel(self.centralwidget)
-        self.label_4.setGeometry(QtCore.QRect(450, 290, 121, 31))
-        font = QtGui.QFont()
-        font.setFamily("Mongolian Baiti")
-        font.setPointSize(15)
-        font.setBold(True)
-        font.setWeight(75)
-        self.label_4.setFont(font)
-        self.label_4.setObjectName("label_4")
         MainWindow.setCentralWidget(self.centralwidget)
         self.menubar = QtWidgets.QMenuBar(MainWindow)
-        self.menubar.setGeometry(QtCore.QRect(0, 0, 1180, 22))
+        self.menubar.setGeometry(QtCore.QRect(0, 0, 1180, 19))
         self.menubar.setObjectName("menubar")
         MainWindow.setMenuBar(self.menubar)
         self.statusbar = QtWidgets.QStatusBar(MainWindow)
@@ -316,45 +300,38 @@ class Ui_MainWindow(object):
         self.retranslateUi(MainWindow)
         QtCore.QMetaObject.connectSlotsByName(MainWindow)
 
-        self.load_data()
+        self.comboBox_pilihKategori.addItems(["kasir", "admin"])
+
+        self.pushButton_simpan.clicked.connect(self.submit)
 
     def retranslateUi(self, MainWindow):
         _translate = QtCore.QCoreApplication.translate
         MainWindow.setWindowTitle(_translate("MainWindow", "MainWindow"))
         self.label.setText(_translate("MainWindow", "Menu Utama Admin"))
-        self.pushButton.setText(_translate("MainWindow", " Dashboard"))
+        self.pushButton.setText(_translate("MainWindow", "Tambahkan user"))
         self.pushButton_3.setText(_translate("MainWindow", "Perbarui Data User"))
-        self.pushButton_4.setText(_translate("MainWindow", "Tambahkan User"))
+        self.pushButton_4.setText(_translate("MainWindow", "Dashboard"))
         self.pushButton_5.setText(_translate("MainWindow", "Hapus User"))
         self.pushButton_6.setText(_translate("MainWindow", " Logout"))
         self.label_2.setText(_translate("MainWindow", "Selamat Datang DI Kelola User"))
-        item = self.tableWidget_2.horizontalHeaderItem(0)
-        item.setText(_translate("MainWindow", "Id"))
-        item = self.tableWidget_2.horizontalHeaderItem(1)
-        item.setText(_translate("MainWindow", "Nama"))
-        item = self.tableWidget_2.horizontalHeaderItem(2)
-        item.setText(_translate("MainWindow", "Username"))
-        item = self.tableWidget_2.horizontalHeaderItem(3)
-        item.setText(_translate("MainWindow", "Password"))
-        item = self.tableWidget_2.horizontalHeaderItem(4)
-        item.setText(_translate("MainWindow", "Role"))
-        self.pushButton_2.setText(_translate("MainWindow", "Lihat Data user"))
-        self.pushButton_7.setText(_translate("MainWindow", "Cari"))
-        self.label_4.setText(_translate("MainWindow", "Username"))
+        self.label_username.setText(_translate("MainWindow", "username"))
+        self.label_nama.setText(_translate("MainWindow", "Nama"))
+        self.pushButton_simpan.setText(_translate("MainWindow", "Simpan"))
+        self.label_level.setText(_translate("MainWindow", "Role"))
+        self.label_password.setText(_translate("MainWindow", "Password"))
+        self.pushButton_2.setText(_translate("MainWindow", "Tambahkan Data User"))
 
-    def load_data(self):
-        data = user_controller.select_data()
+    def submit(self):
+        nama = self.lineEdit_Nama.text()
+        username = self.lineEdit_isiUsername.text()
+        password = self.lineEdit_isiPassword.text()
+        role = self.comboBox_pilihKategori.currentText()
+
+        if not nama or not username or not password:
+            return QtWidgets.QMessageBox.warning(None, "Error", "Tolong isi semua form!")
         
-        self.tableWidget_2.setRowCount(0)
-
-        self.tableWidget_2.setRowCount(len(data))
-
-        for row, user in enumerate(data):
-                self.tableWidget_2.setItem(row, 0, QtWidgets.QTableWidgetItem(str(user['id'])))
-                self.tableWidget_2.setItem(row, 1, QtWidgets.QTableWidgetItem(user['nama']))
-                self.tableWidget_2.setItem(row, 2, QtWidgets.QTableWidgetItem(user['username']))
-                self.tableWidget_2.setItem(row, 3, QtWidgets.QTableWidgetItem(user['password']))
-                self.tableWidget_2.setItem(row, 4, QtWidgets.QTableWidgetItem(user['role']))
+        user_controller.insert_data(nama, username, password, role)
+        QtWidgets.QMessageBox.information(None, "Sukses", "Data user berhasil disimpan")
 
 
 if __name__ == "__main__":

@@ -5,7 +5,7 @@ class User:
         pass
 
     def login(self, username, password):
-        sql = "SELECT level FROM kasir WHERE username = %s AND password = %s"
+        sql = "SELECT * FROM user WHERE username = %s AND password = %s"
         val = (username, password)
 
         mycursor.execute(sql, val)
