@@ -386,23 +386,6 @@ class Ui_MainWindow(object):
         self.window.show()
         self.centralwidget.window().close()
 
-    def submit(self):
-        nama = self.lineEdit_nama.text()
-        username = self.lineEdit_username.text()
-        password = self.lineEdit_password.text()
-        role = self.comboBox_pilihRole.currentText()
-
-        if not nama or not username or not password:
-            return QtWidgets.QMessageBox.warning(None, "Error", "Tolong isi semua form!")
-        
-        user_controller.insert_data(nama, username, password, role)
-        QtWidgets.QMessageBox.information(None, "Sukses", "Data user berhasil disimpan")
-        self.window = QtWidgets.QMainWindow()
-        self.ui = da.Ui_MainWindow()
-        self.ui.setupUi(self.window)
-        self.window.show()
-        self.centralwidget.window().close()
-
 if __name__ == "__main__":
     import sys
     app = QtWidgets.QApplication(sys.argv)
