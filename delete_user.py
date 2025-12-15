@@ -456,7 +456,7 @@ class Ui_MainWindow(object):
             return QtWidgets.QMessageBox.warning(None, "Error", "Data tidak ditemukan!")
         
         user_controller.delete_data(id)
-        QtWidgets.QMessageBox.information(None, "Sukses", "Data user berhasil disimpan")
+        QtWidgets.QMessageBox.information(None, "Sukses", "Data user berhasil dihapus")
 
 
 if __name__ == "__main__":
