@@ -92,3 +92,11 @@ class Xbox(GameConsole):
             GameConsole().remove(gameconsole_id)
             print("✓ Data xbox berhasil dihapus")
             return True
+        
+    def count_data(self):
+        sql = "SELECT COUNT(*) jumlah FROM xbox"
+
+        mycursor.execute(sql)
+        data = mycursor.fetchone()
+
+        return data

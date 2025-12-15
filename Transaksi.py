@@ -71,3 +71,11 @@ class Transaksi:
         mydb.commit()
 
         print("Berhasil memperbarui data transaksi")
+
+    def count_data(self):
+        sql = "SELECT COUNT(*) jumlah FROM transaksi"
+
+        mycursor.execute(sql)
+        data = mycursor.fetchone()
+
+        return data

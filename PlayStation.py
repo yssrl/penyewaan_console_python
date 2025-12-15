@@ -101,3 +101,11 @@ class PlayStation(GameConsole):
             GameConsole().remove(gameconsole_id)
             print("✓ Data playstation berhasil dihapus")
             return True
+        
+    def count_data(self):
+        sql = "SELECT COUNT(*) jumlah FROM playstation"
+
+        mycursor.execute(sql)
+        data = mycursor.fetchone()
+
+        return data
