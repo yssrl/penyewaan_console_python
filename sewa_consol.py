@@ -15,7 +15,7 @@ import login
 from PyQt5 import QtCore, QtGui, QtWidgets
 import insert_sewa_consol as isc
 import update_sewa_consol as usc
-import delete_sewa_consol_2 as dsc
+import delete_sewa_consol as dsc
 import select_sewa_consol as ssc
 
 
