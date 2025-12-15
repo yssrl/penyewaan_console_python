@@ -322,13 +322,7 @@ class Ui_MainWindow(object):
         self.pushButton_logout.clicked.connect(self.logout)
 
         self.comboBox_pilihRole.addItems(["kasir", "admin"])
-
         self.pushButton_simpan.clicked.connect(self.submit)
-
-        self.comboBox_pilihRole.addItems(["kasir", "admin"])
-
-        self.pushButton_simpan.clicked.connect(self.submit)
-
 
     def retranslateUi(self, MainWindow):
         _translate = QtCore.QCoreApplication.translate
