@@ -19,6 +19,15 @@ class User:
         myresult = mycursor.fetchall()
 
         return myresult
+    
+    def search(self, keyword):
+        sql = "SELECT * FROM user WHERE username LIKE %s or nama LIKE %s"
+        val = (f"%{keyword}%", f"%{keyword}%")
+
+        mycursor.execute(sql, val)
+        data = mycursor.fetchall()
+        
+        return data
 
     def insert_data(self, nama, username, password, role):
         sql = "INSERT INTO user (nama, username, password, role) VALUES (%s, %s, %s, %s)"

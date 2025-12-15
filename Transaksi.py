@@ -26,6 +26,21 @@ class Transaksi:
 
         return data
     
+    def search(self, keyword):
+        sql = """
+            SELECT t.id, t.nama_penyewa, t.harga_sewa_per_hari, t.jumlah_hari, c.id gameconsole_id, c.nama
+            FROM transaksi t
+            LEFT JOIN gameconsole c
+            ON t.gameconsole_id = c.id
+            WHERE t.nama_penyewa LIKE %s
+        """
+        val = (f"%{keyword}%",)
+
+        mycursor.execute(sql, val)
+        data = mycursor.fetchall()
+
+        return data
+    
     def get_by_id(self, id):
         sql = "SELECT * FROM transaksi WHERE id = %s"
         val = (id,)

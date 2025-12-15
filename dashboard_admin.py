@@ -326,6 +326,8 @@ class Ui_MainWindow(object):
         self.pushButton_5.clicked.connect(self.delete_user)
         self.pushButton_6.clicked.connect(self.logout)
 
+        self.pushButton_7.clicked.connect(self.search)
+
     def retranslateUi(self, MainWindow):
         _translate = QtCore.QCoreApplication.translate
         MainWindow.setWindowTitle(_translate("MainWindow", "MainWindow"))
@@ -352,6 +354,21 @@ class Ui_MainWindow(object):
 
     def load_data(self):
         data = user_controller.select_data()
+        
+        self.tableWidget_2.setRowCount(0)
+
+        self.tableWidget_2.setRowCount(len(data))
+
+        for row, user in enumerate(data):
+                self.tableWidget_2.setItem(row, 0, QtWidgets.QTableWidgetItem(str(user['id'])))
+                self.tableWidget_2.setItem(row, 1, QtWidgets.QTableWidgetItem(user['nama']))
+                self.tableWidget_2.setItem(row, 2, QtWidgets.QTableWidgetItem(user['username']))
+                self.tableWidget_2.setItem(row, 3, QtWidgets.QTableWidgetItem(user['password']))
+                self.tableWidget_2.setItem(row, 4, QtWidgets.QTableWidgetItem(user['role']))
+
+    def search(self):
+        keyword = self.lineEdit.text()
+        data = user_controller.search(keyword)
         
         self.tableWidget_2.setRowCount(0)
 

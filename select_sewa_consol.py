@@ -300,6 +300,8 @@ class Ui_MainWindow(object):
 
         self.load_data()
 
+        self.pushButton_2.clicked.connect(self.search)
+
     def retranslateUi(self, MainWindow):
         _translate = QtCore.QCoreApplication.translate
         MainWindow.setWindowTitle(_translate("MainWindow", "MainWindow"))
@@ -341,6 +343,51 @@ class Ui_MainWindow(object):
     def load_data(self):
         data = transaksi_controller.get_all()
                 
+        self.tableWidget.setRowCount(0)
+
+        for row_number, row_data in enumerate(data):
+                self.tableWidget.insertRow(row_number)
+
+                # ID Transaksi
+                self.tableWidget.setItem(
+                row_number, 0,
+                QtWidgets.QTableWidgetItem(str(row_data['id']))
+                )
+
+                # ID Consol
+                self.tableWidget.setItem(
+                row_number, 1,
+                QtWidgets.QTableWidgetItem(str(row_data['gameconsole_id']))
+                )
+
+                # Nama Consol
+                self.tableWidget.setItem(
+                row_number, 2,
+                QtWidgets.QTableWidgetItem(str(row_data['nama']))
+                )
+
+                # Nama Penyewa
+                self.tableWidget.setItem(
+                row_number, 3,
+                QtWidgets.QTableWidgetItem(str(row_data['nama_penyewa']))
+                )
+
+                # Jumlah Hari
+                self.tableWidget.setItem(
+                row_number, 4,
+                QtWidgets.QTableWidgetItem(str(row_data['jumlah_hari']))
+                )
+
+                # Harga Sewa / Hari
+                self.tableWidget.setItem(
+                row_number, 5,
+                QtWidgets.QTableWidgetItem(str(row_data['harga_sewa_per_hari']))
+                )
+
+    def search(self):
+        keyword = self.lineEdit.text()
+        data = transaksi_controller.search(keyword)
+        
         self.tableWidget.setRowCount(0)
 
         for row_number, row_data in enumerate(data):
