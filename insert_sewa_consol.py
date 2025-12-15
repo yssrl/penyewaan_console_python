@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 
-# Form implementation generated from reading ui file 'sewa_consol.ui'
+# Form implementation generated from reading ui file 'insert_sewa_consol.ui'
 #
 # Created by: PyQt5 UI code generator 5.15.9
 #
@@ -14,7 +14,7 @@ from PyQt5 import QtCore, QtGui, QtWidgets
 class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
         MainWindow.setObjectName("MainWindow")
-        MainWindow.resize(1172, 795)
+        MainWindow.resize(1168, 795)
         self.centralwidget = QtWidgets.QWidget(MainWindow)
         self.centralwidget.setObjectName("centralwidget")
         self.frame = QtWidgets.QFrame(self.centralwidget)
@@ -215,56 +215,48 @@ class Ui_MainWindow(object):
 "    color: #5a5a5a\n"
 "}")
         self.label_2.setObjectName("label_2")
-        self.pushButton_2 = QtWidgets.QPushButton(self.centralwidget)
-        self.pushButton_2.setGeometry(QtCore.QRect(760, 500, 201, 141))
+        self.label_6 = QtWidgets.QLabel(self.centralwidget)
+        self.label_6.setGeometry(QtCore.QRect(450, 370, 131, 31))
         font = QtGui.QFont()
         font.setPointSize(10)
         font.setBold(True)
         font.setWeight(75)
-        self.pushButton_2.setFont(font)
-        self.pushButton_2.setStyleSheet("QPushButton {\n"
-"    background-color: #3498db;   \n"
-"    color: white; \n"
-"    border-radius: 6px;            \n"
-"}\n"
-"\n"
-"QPushButton:hover {\n"
-"    background-color: #2980b9;   \n"
-"}\n"
-"\n"
-"QPushButton:pressed {\n"
-"    background-color: #1c6690;  \n"
-"}\n"
-"")
-        self.pushButton_2.setObjectName("pushButton_2")
-        self.pushButton_8 = QtWidgets.QPushButton(self.centralwidget)
-        self.pushButton_8.setGeometry(QtCore.QRect(530, 500, 211, 141))
+        self.label_6.setFont(font)
+        self.label_6.setObjectName("label_6")
+        self.lineEdit_2 = QtWidgets.QLineEdit(self.centralwidget)
+        self.lineEdit_2.setGeometry(QtCore.QRect(620, 280, 241, 51))
+        self.lineEdit_2.setObjectName("lineEdit_2")
+        self.label_5 = QtWidgets.QLabel(self.centralwidget)
+        self.label_5.setGeometry(QtCore.QRect(450, 290, 131, 31))
         font = QtGui.QFont()
         font.setPointSize(10)
         font.setBold(True)
         font.setWeight(75)
-        self.pushButton_8.setFont(font)
-        self.pushButton_8.setStyleSheet("QPushButton {\n"
-"    background-color: #3498db;   \n"
-"    color: white; \n"
-"    border-radius: 6px;            \n"
-"}\n"
-"\n"
-"QPushButton:hover {\n"
-"    background-color: #2980b9;   \n"
-"}\n"
-"\n"
-"QPushButton:pressed {\n"
-"    background-color: #1c6690;  \n"
-"}\n"
-"")
-        self.pushButton_8.setObjectName("pushButton_8")
+        self.label_5.setFont(font)
+        self.label_5.setObjectName("label_5")
+        self.label_8 = QtWidgets.QLabel(self.centralwidget)
+        self.label_8.setGeometry(QtCore.QRect(450, 450, 131, 31))
+        font = QtGui.QFont()
+        font.setPointSize(10)
+        font.setBold(True)
+        font.setWeight(75)
+        self.label_8.setFont(font)
+        self.label_8.setObjectName("label_8")
+        self.label_9 = QtWidgets.QLabel(self.centralwidget)
+        self.label_9.setGeometry(QtCore.QRect(450, 520, 151, 31))
+        font = QtGui.QFont()
+        font.setPointSize(10)
+        font.setBold(True)
+        font.setWeight(75)
+        self.label_9.setFont(font)
+        self.label_9.setObjectName("label_9")
         self.pushButton_7 = QtWidgets.QPushButton(self.centralwidget)
-        self.pushButton_7.setGeometry(QtCore.QRect(760, 330, 201, 151))
+        self.pushButton_7.setGeometry(QtCore.QRect(840, 580, 111, 51))
         font = QtGui.QFont()
         font.setPointSize(10)
         font.setBold(True)
         font.setWeight(75)
+        font.setKerning(False)
         self.pushButton_7.setFont(font)
         self.pushButton_7.setStyleSheet("QPushButton {\n"
 "    background-color: #3498db;   \n"
@@ -280,15 +272,18 @@ class Ui_MainWindow(object):
 "    background-color: #1c6690;  \n"
 "}\n"
 "")
+        self.pushButton_7.setDefault(False)
+        self.pushButton_7.setFlat(False)
         self.pushButton_7.setObjectName("pushButton_7")
-        self.pushButton_9 = QtWidgets.QPushButton(self.centralwidget)
-        self.pushButton_9.setGeometry(QtCore.QRect(530, 330, 211, 151))
+        self.pushButton_2 = QtWidgets.QPushButton(self.centralwidget)
+        self.pushButton_2.setGeometry(QtCore.QRect(700, 580, 111, 51))
         font = QtGui.QFont()
         font.setPointSize(10)
         font.setBold(True)
         font.setWeight(75)
-        self.pushButton_9.setFont(font)
-        self.pushButton_9.setStyleSheet("QPushButton {\n"
+        font.setKerning(False)
+        self.pushButton_2.setFont(font)
+        self.pushButton_2.setStyleSheet("QPushButton {\n"
 "    background-color: #3498db;   \n"
 "    color: white; \n"
 "    border-radius: 6px;            \n"
@@ -302,10 +297,53 @@ class Ui_MainWindow(object):
 "    background-color: #1c6690;  \n"
 "}\n"
 "")
-        self.pushButton_9.setObjectName("pushButton_9")
+        self.pushButton_2.setDefault(False)
+        self.pushButton_2.setFlat(False)
+        self.pushButton_2.setObjectName("pushButton_2")
+        self.pushButton_8 = QtWidgets.QPushButton(self.centralwidget)
+        self.pushButton_8.setGeometry(QtCore.QRect(880, 280, 121, 51))
+        font = QtGui.QFont()
+        font.setPointSize(10)
+        font.setBold(True)
+        font.setWeight(75)
+        font.setKerning(False)
+        self.pushButton_8.setFont(font)
+        self.pushButton_8.setStyleSheet("QPushButton {\n"
+"    background-color: #3498db;   \n"
+"    color: white; \n"
+"    border-radius: 6px;            \n"
+"}\n"
+"\n"
+"QPushButton:hover {\n"
+"    background-color: #2980b9;   \n"
+"}\n"
+"\n"
+"QPushButton:pressed {\n"
+"    background-color: #1c6690;  \n"
+"}\n"
+"")
+        self.pushButton_8.setDefault(False)
+        self.pushButton_8.setFlat(False)
+        self.pushButton_8.setObjectName("pushButton_8")
+        self.label_14 = QtWidgets.QLabel(self.centralwidget)
+        self.label_14.setGeometry(QtCore.QRect(620, 510, 381, 51))
+        font = QtGui.QFont()
+        font.setPointSize(10)
+        font.setBold(True)
+        font.setWeight(75)
+        self.label_14.setFont(font)
+        self.label_14.setText("")
+        self.label_14.setAlignment(QtCore.Qt.AlignCenter)
+        self.label_14.setObjectName("label_14")
+        self.lineEdit_3 = QtWidgets.QLineEdit(self.centralwidget)
+        self.lineEdit_3.setGeometry(QtCore.QRect(620, 360, 381, 51))
+        self.lineEdit_3.setObjectName("lineEdit_3")
+        self.lineEdit_4 = QtWidgets.QLineEdit(self.centralwidget)
+        self.lineEdit_4.setGeometry(QtCore.QRect(620, 440, 381, 51))
+        self.lineEdit_4.setObjectName("lineEdit_4")
         MainWindow.setCentralWidget(self.centralwidget)
         self.menubar = QtWidgets.QMenuBar(MainWindow)
-        self.menubar.setGeometry(QtCore.QRect(0, 0, 1172, 26))
+        self.menubar.setGeometry(QtCore.QRect(0, 0, 1168, 26))
         self.menubar.setObjectName("menubar")
         MainWindow.setMenuBar(self.menubar)
         self.statusbar = QtWidgets.QStatusBar(MainWindow)
@@ -325,10 +363,13 @@ class Ui_MainWindow(object):
         self.pushButton_5.setText(_translate("MainWindow", " Sewa Consol"))
         self.pushButton_6.setText(_translate("MainWindow", " Logout"))
         self.label_2.setText(_translate("MainWindow", "Selamat Datang DI Sewa Consol"))
-        self.pushButton_2.setText(_translate("MainWindow", "Select All Sewa Cosol"))
-        self.pushButton_8.setText(_translate("MainWindow", "Delete Sewa Consol"))
-        self.pushButton_7.setText(_translate("MainWindow", "Edit Sewa Consol"))
-        self.pushButton_9.setText(_translate("MainWindow", "Insert Sewa Consol"))
+        self.label_6.setText(_translate("MainWindow", "Nama Penyewa"))
+        self.label_5.setText(_translate("MainWindow", "ID  Consol"))
+        self.label_8.setText(_translate("MainWindow", "Jumlah Hari"))
+        self.label_9.setText(_translate("MainWindow", "Harga Sewa/hari"))
+        self.pushButton_7.setText(_translate("MainWindow", "Back"))
+        self.pushButton_2.setText(_translate("MainWindow", "Save"))
+        self.pushButton_8.setText(_translate("MainWindow", "Cari"))
 
 
 if __name__ == "__main__":

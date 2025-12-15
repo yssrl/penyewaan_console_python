@@ -7,13 +7,192 @@
     <x>0</x>
     <y>0</y>
     <width>1172</width>
-    <height>795</height>
+    <height>799</height>
    </rect>
   </property>
   <property name="windowTitle">
    <string>MainWindow</string>
   </property>
   <widget class="QWidget" name="centralwidget">
+   <widget class="QPushButton" name="pushButton_7">
+    <property name="geometry">
+     <rect>
+      <x>840</x>
+      <y>580</y>
+      <width>111</width>
+      <height>51</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>10</pointsize>
+      <weight>75</weight>
+      <bold>true</bold>
+      <kerning>false</kerning>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton {
+    background-color: #3498db;   
+	color: white; 
+	border-radius: 6px;            
+}
+
+QPushButton:hover {
+    background-color: #2980b9;   
+}
+
+QPushButton:pressed {
+    background-color: #1c6690;  
+}
+</string>
+    </property>
+    <property name="text">
+     <string>Back</string>
+    </property>
+    <property name="default">
+     <bool>false</bool>
+    </property>
+    <property name="flat">
+     <bool>false</bool>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pushButton_8">
+    <property name="geometry">
+     <rect>
+      <x>880</x>
+      <y>280</y>
+      <width>121</width>
+      <height>51</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>10</pointsize>
+      <weight>75</weight>
+      <bold>true</bold>
+      <kerning>false</kerning>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton {
+    background-color: #3498db;   
+	color: white; 
+	border-radius: 6px;            
+}
+
+QPushButton:hover {
+    background-color: #2980b9;   
+}
+
+QPushButton:pressed {
+    background-color: #1c6690;  
+}
+</string>
+    </property>
+    <property name="text">
+     <string>Cari</string>
+    </property>
+    <property name="default">
+     <bool>false</bool>
+    </property>
+    <property name="flat">
+     <bool>false</bool>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_14">
+    <property name="geometry">
+     <rect>
+      <x>620</x>
+      <y>510</y>
+      <width>381</width>
+      <height>51</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>10</pointsize>
+      <weight>75</weight>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_5">
+    <property name="geometry">
+     <rect>
+      <x>450</x>
+      <y>290</y>
+      <width>131</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>10</pointsize>
+      <weight>75</weight>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="text">
+     <string>ID  Consol</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_8">
+    <property name="geometry">
+     <rect>
+      <x>450</x>
+      <y>450</y>
+      <width>131</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>10</pointsize>
+      <weight>75</weight>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="text">
+     <string>Jumlah Hari</string>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="lineEdit_2">
+    <property name="geometry">
+     <rect>
+      <x>620</x>
+      <y>280</y>
+      <width>241</width>
+      <height>51</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_6">
+    <property name="geometry">
+     <rect>
+      <x>450</x>
+      <y>370</y>
+      <width>131</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>10</pointsize>
+      <weight>75</weight>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="text">
+     <string>Nama Penyewa</string>
+    </property>
+   </widget>
    <widget class="QFrame" name="frame">
     <property name="geometry">
      <rect>
@@ -318,6 +497,49 @@ QPushButton {
      </property>
     </widget>
    </widget>
+   <widget class="QPushButton" name="pushButton_2">
+    <property name="geometry">
+     <rect>
+      <x>700</x>
+      <y>580</y>
+      <width>111</width>
+      <height>51</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>10</pointsize>
+      <weight>75</weight>
+      <bold>true</bold>
+      <kerning>false</kerning>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton {
+    background-color: #3498db;   
+	color: white; 
+	border-radius: 6px;            
+}
+
+QPushButton:hover {
+    background-color: #2980b9;   
+}
+
+QPushButton:pressed {
+    background-color: #1c6690;  
+}
+</string>
+    </property>
+    <property name="text">
+     <string>Save</string>
+    </property>
+    <property name="default">
+     <bool>false</bool>
+    </property>
+    <property name="flat">
+     <bool>false</bool>
+    </property>
+   </widget>
    <widget class="QFrame" name="frame_2">
     <property name="geometry">
      <rect>
@@ -366,13 +588,13 @@ QPushButton {
      </property>
     </widget>
    </widget>
-   <widget class="QPushButton" name="pushButton_2">
+   <widget class="QLabel" name="label_9">
     <property name="geometry">
      <rect>
-      <x>760</x>
-      <y>500</y>
-      <width>201</width>
-      <height>141</height>
+      <x>450</x>
+      <y>520</y>
+      <width>151</width>
+      <height>31</height>
      </rect>
     </property>
     <property name="font">
@@ -382,132 +604,28 @@ QPushButton {
       <bold>true</bold>
      </font>
     </property>
-    <property name="styleSheet">
-     <string notr="true">QPushButton {
-    background-color: #3498db;   
-	color: white; 
-	border-radius: 6px;            
-}
-
-QPushButton:hover {
-    background-color: #2980b9;   
-}
-
-QPushButton:pressed {
-    background-color: #1c6690;  
-}
-</string>
-    </property>
     <property name="text">
-     <string>Select All Sewa Cosol</string>
+     <string>Harga Sewa/hari</string>
     </property>
    </widget>
-   <widget class="QPushButton" name="pushButton_8">
+   <widget class="QLineEdit" name="lineEdit_3">
     <property name="geometry">
      <rect>
-      <x>530</x>
-      <y>500</y>
-      <width>211</width>
-      <height>141</height>
+      <x>620</x>
+      <y>360</y>
+      <width>381</width>
+      <height>51</height>
      </rect>
-    </property>
-    <property name="font">
-     <font>
-      <pointsize>10</pointsize>
-      <weight>75</weight>
-      <bold>true</bold>
-     </font>
-    </property>
-    <property name="styleSheet">
-     <string notr="true">QPushButton {
-    background-color: #3498db;   
-	color: white; 
-	border-radius: 6px;            
-}
-
-QPushButton:hover {
-    background-color: #2980b9;   
-}
-
-QPushButton:pressed {
-    background-color: #1c6690;  
-}
-</string>
-    </property>
-    <property name="text">
-     <string>Delete Sewa Consol</string>
     </property>
    </widget>
-   <widget class="QPushButton" name="pushButton_7">
+   <widget class="QLineEdit" name="lineEdit_4">
     <property name="geometry">
      <rect>
-      <x>760</x>
-      <y>330</y>
-      <width>201</width>
-      <height>151</height>
+      <x>620</x>
+      <y>440</y>
+      <width>381</width>
+      <height>51</height>
      </rect>
-    </property>
-    <property name="font">
-     <font>
-      <pointsize>10</pointsize>
-      <weight>75</weight>
-      <bold>true</bold>
-     </font>
-    </property>
-    <property name="styleSheet">
-     <string notr="true">QPushButton {
-    background-color: #3498db;   
-	color: white; 
-	border-radius: 6px;            
-}
-
-QPushButton:hover {
-    background-color: #2980b9;   
-}
-
-QPushButton:pressed {
-    background-color: #1c6690;  
-}
-</string>
-    </property>
-    <property name="text">
-     <string>Edit Sewa Consol</string>
-    </property>
-   </widget>
-   <widget class="QPushButton" name="pushButton_9">
-    <property name="geometry">
-     <rect>
-      <x>530</x>
-      <y>330</y>
-      <width>211</width>
-      <height>151</height>
-     </rect>
-    </property>
-    <property name="font">
-     <font>
-      <pointsize>10</pointsize>
-      <weight>75</weight>
-      <bold>true</bold>
-     </font>
-    </property>
-    <property name="styleSheet">
-     <string notr="true">QPushButton {
-    background-color: #3498db;   
-	color: white; 
-	border-radius: 6px;            
-}
-
-QPushButton:hover {
-    background-color: #2980b9;   
-}
-
-QPushButton:pressed {
-    background-color: #1c6690;  
-}
-</string>
-    </property>
-    <property name="text">
-     <string>Insert Sewa Consol</string>
     </property>
    </widget>
   </widget>
